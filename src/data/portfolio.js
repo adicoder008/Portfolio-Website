@@ -24,14 +24,11 @@ export const profile = {
 
 /** Rotating screenshots in hero engineering visual */
 export const heroScreenshots = [
-  { label: 'OnQuest · Travel platform', src: '/image2.png' },
-  { label: 'Glucometer · Health dashboard', src: '/projects/glucometer-dashboard.png' },
-  {
-    label: 'AI Analytics Engine',
-    src: null,
-    gradient: 'linear-gradient(135deg, #050816 0%, #1e1b4b 45%, #312e81 100%)',
-  },
-  { label: 'Realtime monitoring', src: '/projects/glucometer.png' },
+  { label: 'OnQuest · Travel platform', src: '/onquest.png' },
+  { label: 'AI Analytics Engine', src: '/analytics.png' },
+  { label: 'Glucometer · Monitoring UI', src: '/gluco.png' },
+  { label: 'Glucometer · Dashboard', src: '/projects/glucometer-dashboard.png' },
+  { label: 'Smart Resume Analyser', src: '/res.png' },
 ]
 
 export const aboutPoints = [
