@@ -1,12 +1,154 @@
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
 
-*{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --bg-base: #050816;
+  --bg-elevated: #0b1020;
+  --bg-card: rgba(11, 16, 32, 0.72);
+  --accent-violet: #8b5cf6;
+  --accent-indigo: #6366f1;
+  --accent-purple: #a78bfa;
+  --text-primary: #f1f0f5;
+  --text-muted: #9b97ad;
+  --border-subtle: rgba(139, 92, 246, 0.12);
+  --border-glow: rgba(129, 140, 248, 0.22);
+
+  color-scheme: dark;
 }
-::selection{
-    color:rgb(238, 238, 54)
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark,
+html {
+  background-color: var(--bg-base);
+}
+
+* {
+  font-family: var(--font-sans);
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.38);
+  color: #faf9ff;
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl backdrop-blur-xl;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    box-shadow:
+      0 0 0 1px rgba(167, 139, 250, 0.04) inset,
+      0 1px 0 rgba(255, 255, 255, 0.03) inset,
+      0 24px 80px -28px rgba(0, 0, 0, 0.75),
+      0 0 48px -24px rgba(99, 102, 241, 0.08);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition;
+    background: linear-gradient(135deg, #6d28d9 0%, #4f46e5 100%);
+    box-shadow: 0 8px 28px -8px rgba(109, 40, 217, 0.55);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+    box-shadow: 0 10px 32px -8px rgba(124, 58, 237, 0.5);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition;
+    border-color: rgba(167, 139, 250, 0.18);
+    background: rgba(11, 16, 32, 0.6);
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(167, 139, 250, 0.35);
+    background: rgba(109, 40, 217, 0.12);
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 75%);
+}
+
+.hero-cursor {
+  animation: hero-blink 1s step-end infinite;
+  background-color: rgba(167, 139, 250, 0.9);
+}
+
+@keyframes hero-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Projects bento — 4 cards in one frame */
+.projects-bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+  gap: 0.625rem;
+  height: min(112vh, 1240px);
+  max-height: 1240px;
+}
+
+@media (min-width: 640px) {
+  .projects-bento {
+    height: min(108vh, 1180px);
+    max-height: 1180px;
+  }
+}
+
+@media (max-width: 639px) {
+  .projects-bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    height: auto;
+    max-height: none;
+    gap: 0.5rem;
+  }
+
+  .projects-bento > * {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-height: 580px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-cursor {
+    animation: none;
+    opacity: 1;
+  }
 }
