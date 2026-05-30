@@ -26,8 +26,8 @@ export const profile = {
 export const heroScreenshots = [
   { label: 'OnQuest · Travel platform', src: '/onquest.png' },
   { label: 'AI Analytics Engine', src: '/analytics.png' },
+  { label: 'ProductSense AI', src: '/productsense.png' },
   { label: 'Glucometer · Monitoring UI', src: '/gluco.png' },
-  { label: 'Glucometer · Dashboard', src: '/projects/glucometer-dashboard.png' },
   { label: 'Smart Resume Analyser', src: '/res.png' },
 ]
 
@@ -117,7 +117,7 @@ export const featuredProjects = [
     github: null,
     live: 'https://onquest.in/',
     featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-7 sm:col-start-1 sm:row-start-1',
+    bentoClass: 'col-span-12 row-span-3 sm:col-span-4 sm:col-start-1 sm:row-start-1',
   },
   {
     id: 'analytics',
@@ -128,10 +128,24 @@ export const featuredProjects = [
     tech: ['React', 'Node.js', 'MongoDB', 'OpenAI API', 'Express', 'Charts'],
     image: '/analytics.png',
     imageFallback: 'linear-gradient(135deg, #050816 0%, #1e1b4b 45%, #312e81 100%)',
-    github: null,
+    github: 'https://github.com/adicoder008/Business-Insights-Engine',
     live: null,
     featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-5 sm:col-start-8 sm:row-start-1',
+    bentoClass: 'col-span-12 row-span-3 sm:col-span-4 sm:col-start-5 sm:row-start-1',
+  },
+  {
+    id: 'productsense',
+    title: 'ProductSense AI',
+    subtitle: 'Browser Extension for e-commerce platforms',
+    description:
+      'AI platform for product teams — analyzes feedback, usage signals, and feature data to surface priorities and support faster, evidence-backed product decisions.',
+    tech: ['React', 'TypeScript', 'Plasmo', 'OpenAI API', 'Analytics'],
+    image: '/prod.png',
+    imageFallback: 'linear-gradient(135deg, #050816 0%, #312e81 42%, #4c1d95 100%)',
+    github: 'https://github.com/adicoder008/ProductSense-AI/blob/main/README.md',
+    live: null,
+    featured: true,
+    bentoClass: 'col-span-12 row-span-3 sm:col-span-4 sm:col-start-9 sm:row-start-1',
   },
   {
     id: 'glucometer',
@@ -142,10 +156,10 @@ export const featuredProjects = [
     tech: ['React', 'TypeScript', 'Express', 'WebSockets', 'ESP32','Hardware integration', 'MongoDB'],
     image: '/gluco.png',
     imageFallback: '/projects/glucometer-dashboard.png',
-    github: null,
+    github: 'https://github.com/adicoder008/Glucometer-Demo-Website',
     live: 'https://glucometer-demo-website-git-main-adityas-projects-07892ce5.vercel.app/',
     featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-5 sm:col-start-1 sm:row-start-4',
+    bentoClass: 'col-span-12 row-span-3 sm:col-span-6 sm:col-start-1 sm:row-start-4',
   },
   {
     id: 'Smart Resume Analyser',
@@ -156,10 +170,10 @@ export const featuredProjects = [
     tech: ['React', 'TypeScript', 'Node.js', 'WebSockets', 'MongoDB'],
     image: '/res.png',
     imageFallback: 'linear-gradient(145deg, #050816 0%, #1e1b4b 42%, #312e81 100%)',
-    github: null,
+    github: 'https://github.com/adicoder008/NEWW',
     live: 'https://neww-git-master-adityas-projects-07892ce5.vercel.app/',
     featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-7 sm:col-start-6 sm:row-start-4',
+    bentoClass: 'col-span-12 row-span-3 sm:col-span-6 sm:col-start-7 sm:row-start-4',
   },
 ]
 

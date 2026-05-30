@@ -2,11 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 
 :root {
-  --font-display: "Inter", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
   --bg-base: #050816;
@@ -109,20 +109,20 @@ body {
   }
 }
 
-/* Projects bento — 4 cards in one frame */
+/* Projects bento — 5 cards: 3 top row + 2 bottom row */
 .projects-bento {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(6, minmax(0, 1fr));
   gap: 0.625rem;
-  height: min(112vh, 1240px);
-  max-height: 1240px;
+  height: min(118vh, 1320px);
+  max-height: 1320px;
 }
 
 @media (min-width: 640px) {
   .projects-bento {
-    height: min(108vh, 1180px);
-    max-height: 1180px;
+    height: min(114vh, 1280px);
+    max-height: 1280px;
   }
 }
 

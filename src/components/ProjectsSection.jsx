@@ -10,10 +10,10 @@ const ProjectsSection = () => {
         <SectionHeader
           label="Featured work"
           title="Selected projects"
-          description="Four products — travel-tech, AI analytics, healthcare IoT, and internal tooling."
+          description="Five products — travel-tech, AI analytics, product intelligence, healthcare IoT, and internal tooling."
         />
 
-        {/* Bento grid: all 4 cards in one viewport on desktop */}
+        {/* Bento grid: 5 cards — 3 top, 2 bottom */}
         <div className="projects-bento mt-8">
           {featuredProjects.map((project, i) => (
             <FeaturedProjectCard
