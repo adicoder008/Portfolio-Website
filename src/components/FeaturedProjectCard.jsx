@@ -24,7 +24,7 @@ const FeaturedProjectCard = ({
 
   return (
     <motion.article
-      className={`glass-card group flex min-h-0 h-full flex-col overflow-hidden ring-1 ring-white/0 transition-[border-color,box-shadow,ring-color] hover:border-white/45 hover:ring-white/35 ${className}`}
+      className={`glass-card group flex min-h-0 h-full flex-col overflow-hidden transition-[border-color,box-shadow] hover:border-violet-500/25 ${className}`}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
@@ -79,21 +79,13 @@ const FeaturedProjectCard = ({
           {description}
         </p>
 
-        <ul className={`flex flex-wrap gap-1 ${compact ? 'mt-2' : 'mt-4 gap-2'}`}>
-          {visibleTech.map((t) => (
-            <li
-              key={t}
-              className={`rounded border border-violet-500/10 bg-violet-500/[0.06] font-mono uppercase tracking-wide text-lavender-400 ${
-                compact ? 'px-1.5 py-px text-[8px]' : 'px-2 py-0.5 text-[10px]'
-              }`}
-            >
-              {t}
-            </li>
-          ))}
-          {extraTech > 0 ? (
-            <li className="px-1.5 py-px font-mono text-[8px] text-lavender-500">+{extraTech}</li>
-          ) : null}
-        </ul>
+        <p
+          className={`font-mono uppercase tracking-wide text-lavender-500 ${
+            compact ? 'mt-2 text-[9px] leading-relaxed' : 'mt-4 text-[10px]'
+          }`}
+        >
+          {[...visibleTech, extraTech > 0 ? `+${extraTech}` : null].filter(Boolean).join(' · ')}
+        </p>
 
         <div className={`mt-auto flex flex-wrap gap-1.5 ${compact ? 'pt-2' : 'mt-5 gap-2'}`}>
           {github ? (

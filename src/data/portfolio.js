@@ -12,11 +12,11 @@ export const profile = {
   heroTags: ['AI systems', 'Full-stack', 'Startup products'],
   heroStats: [
     { value: '10+', label: 'Products shipped' },
-    { value: 'MERN · Nest.js · TS', label: 'Core stack' },
+    { value: 'MERN · Next.js · TS', label: 'Core stack' },
     { value: 'Full Stack', label: 'Engineer' },
   ],
-  location: 'NITK',
-  email: '', // Add your email to enable the mailto CTA
+  location: 'NITK Surathkal',
+  email: 'adityasingh13240@gmail.com',
   heroPhoto: '/Me.avif',
   resumeUrl: '/resume.pdf', // Place resume.pdf in /public, or change to your PDF URL
   availability: 'Open to full-time · contract · founding-engineer roles',
@@ -26,23 +26,26 @@ export const profile = {
 export const heroScreenshots = [
   { label: 'OnQuest · Travel platform', src: '/onquest.png' },
   { label: 'AI Analytics Engine', src: '/analytics.png' },
-  { label: 'ProductSense AI', src: '/productsense.png' },
+  { label: 'ProductSense AI', src: '/prod.png' },
   { label: 'Glucometer · Monitoring UI', src: '/gluco.png' },
   { label: 'Smart Resume Analyser', src: '/res.png' },
 ]
 
 export const aboutPoints = [
   {
-    title: 'Systems & architecture',
-    body: 'Design scalable APIs, auth systems, databases, and frontend architecture built for fast iteration and long-term maintainability.',
+    title: 'Full-stack systems',
+    icon: 'stack',
+    body: 'Design and ship end-to-end product systems — React & Next.js on the frontend, Node.js & Express on the backend, plus Firebase and Appwrite services with auth and authorization built as scalable systems.',
   },
   {
     title: 'AI & analytics',
-    body: 'Build AI-assisted workflows, dashboards, automation systems, and analytics tools focused on real product usage and operational insights.',
+    icon: 'ai',
+    body: 'Build AI-assisted workflows, analytics dashboards, and automation pipelines tied to real product usage, operational metrics, and decision-ready insights for founders and teams.',
   },
   {
-    title: 'Execution mindset',
-    body: 'Experienced in fast-moving startup environments where speed, ownership, and production-ready engineering matter.',
+    title: 'Ship fast, ship right',
+    icon: 'bolt',
+    body: 'Thrive in fast-moving startup environments where ownership, iteration speed, and production-ready engineering discipline matter — from prototype to deployed product.',
   },
 ]
 
@@ -61,46 +64,44 @@ export const aboutPoints = [
 //   { name: 'Vercel', category: 'Deploy' },
 // ]
 
-export const techStackGroups = [
+export const engineeringCapabilities = [
   {
-    title: 'Core stack',
-    chips: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Express.js'],
-    bentoClass: 'sm:col-span-6 lg:col-span-6 lg:row-span-2',
+    id: 'fullstack',
+    title: 'Full Stack Engineering',
+    frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+    backend: ['Node.js', 'Express.js', 'Firebase', 'Appwrite', 'Auth', 'Authorization', 'REST APIs'],
+    description:
+      'Built production web applications and backend services — APIs, auth layers, and scalable systems with equal depth across frontend and server-side engineering.',
+    emphasis: 'Primary',
+    strength: 92,
+    projects: '5+ products',
   },
   {
-    title: 'Backend & APIs',
-    chips: ['REST APIs', 'WebSockets', 'Authentication', 'Realtime Systems', 'Modular Architectures'],
-    bentoClass: 'sm:col-span-6 lg:col-span-3',
+    id: 'ai',
+    title: 'AI Engineering',
+    skills: ['OpenAI', 'Gemini', 'Prompt Engineering', 'Workflows', 'Integrations'],
+    description: 'Built AI-powered recommendation, automation, and product intelligence systems.',
+    emphasis: 'Core',
+    strength: 88,
+    projects: '4+ AI systems',
   },
   {
-    title: 'AI systems',
-    chips: ['OpenAI APIs', 'AI Workflows', 'Automation', 'Prompt Systems', 'AI Integrations'],
-    bentoClass: 'sm:col-span-6 lg:col-span-3',
+    id: 'data',
+    title: 'Data & Analytics',
+    skills: ['SQL', 'Pandas', 'Power BI', 'Python', 'Dashboards'],
+    description: 'Built analytics pipelines, dashboards, and business intelligence workflows.',
+    emphasis: 'Applied',
+    strength: 80,
+    projects: '3+ pipelines',
   },
   {
-    title: 'Data & analytics',
-    chips: ['SQL', 'Power BI', 'Excel', 'Python (Pandas)', 'Dashboards', 'Analytics Pipelines'],
-    bentoClass: 'sm:col-span-6 lg:col-span-4',
-  },
-  {
-    title: 'Databases',
-    chips: ['SQL', 'NoSQL', 'MongoDB', 'Redis', 'Firebase'],
-    bentoClass: 'sm:col-span-6 lg:col-span-3',
-  },
-  {
-    title: 'Languages',
-    chips: ['C++', 'JavaScript', 'TypeScript', 'Python', 'Pandas'],
-    bentoClass: 'sm:col-span-12 lg:col-span-5',
-  },
-  {
-    title: 'Embedded & realtime',
-    chips: ['ESP32', 'IoT Systems', 'Sensor Monitoring', 'Realtime Pipelines'],
-    bentoClass: 'sm:col-span-6 lg:col-span-6',
-  },
-  {
-    title: 'Developer tooling',
-    chips: ['Git', 'GitHub', 'Postman', 'Vercel', 'Vite'],
-    bentoClass: 'sm:col-span-6 lg:col-span-6',
+    id: 'embedded',
+    title: 'Embedded & Real-Time Systems',
+    skills: ['ESP32', 'Sensors', 'WebSockets', 'IoT', 'Signal processing'],
+    description: 'Built real-time monitoring, sensor pipelines, and hardware-software integrations.',
+    emphasis: 'Research',
+    strength: 75,
+    projects: '2+ systems',
   },
 ]
 

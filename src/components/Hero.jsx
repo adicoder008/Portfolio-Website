@@ -33,7 +33,7 @@ const Hero = () => {
             {profile.heroTags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-violet-500/15 bg-violet-500/[0.06] px-2.5 py-1 text-[10px] font-medium text-lavender-400"
+                className="rounded-full bg-violet-500/[0.08] px-2.5 py-1 text-[10px] font-medium text-lavender-400"
               >
                 {tag}
               </span>
