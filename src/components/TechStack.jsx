@@ -91,7 +91,7 @@ const TechStack = () => {
         <SectionHeader
           label="Capabilities"
           title="Tools I build with"
-          description="Four engineering domains — full-stack products, AI systems, analytics, and embedded real-time work."
+          description="Four engineering domains — backend & distributed systems, AI systems, analytics, and embedded real-time work."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:gap-6">

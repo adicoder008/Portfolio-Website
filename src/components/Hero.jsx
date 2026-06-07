@@ -20,7 +20,7 @@ const Hero = () => {
           </MotionReveal>
 
           <MotionReveal delay={0.05} className="mt-4">
-            <h1 className="text-[clamp(1.75rem,4.5vw,2.75rem)] font-semibold leading-[1.15] tracking-tight text-white">
+            <h1 className="font-headline text-[clamp(1.75rem,4.5vw,2.75rem)] font-light leading-[1.2] tracking-[-0.02em] text-white">
               {profile.headline}
             </h1>
           </MotionReveal>

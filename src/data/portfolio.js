@@ -5,15 +5,15 @@
 export const profile = {
   shortName: 'Aditya',
   fullName: 'Aditya Singh',
-  role: 'Full-stack engineer',
-  headline: 'Full-stack engineer building AI-powered products.',
+  role: 'Software Engineer',
+  headline: 'Software engineer building distributed systems and AI-powered products.',
   subheadline:
-    'I ship React & Node applications — analytics dashboards, APIs, and startup products — with clean architecture and production discipline.',
-  heroTags: ['AI systems', 'Full-stack', 'Startup products'],
+    'I design and ship backend services, concurrent pipelines, real-time platforms, and production systems — from event-driven architectures and observability tooling to full product delivery.',
+  heroTags: ['Distributed systems', 'Backend engineering', 'Systems design'],
   heroStats: [
     { value: '10+', label: 'Products shipped' },
-    { value: 'MERN · Next.js · TS', label: 'Core stack' },
-    { value: 'Full Stack', label: 'Engineer' },
+    { value: 'C++ · Node · TS', label: 'Core languages' },
+    { value: 'SDE', label: 'Engineer' },
   ],
   location: 'NITK Surathkal',
   email: 'adityasingh13240@gmail.com',
@@ -24,6 +24,8 @@ export const profile = {
 
 /** Rotating screenshots in hero engineering visual */
 export const heroScreenshots = [
+  { label: 'NetPulse · Service monitoring', src: '/netpulse.png' },
+  { label: 'Sentinel · Log pipeline', src: '/sentinel.png' },
   { label: 'OnQuest · Travel platform', src: '/onquest.png' },
   { label: 'AI Analytics Engine', src: '/analytics.png' },
   { label: 'ProductSense AI', src: '/prod.png' },
@@ -33,9 +35,9 @@ export const heroScreenshots = [
 
 export const aboutPoints = [
   {
-    title: 'Full-stack systems',
+    title: 'Backend & distributed systems',
     icon: 'stack',
-    body: 'Design and ship end-to-end product systems — React & Next.js on the frontend, Node.js & Express on the backend, plus Firebase and Appwrite services with auth and authorization built as scalable systems.',
+    body: 'Design event-driven services, concurrent pipelines, and scalable APIs — Node.js & Fastify backends, Redis Streams, PostgreSQL, WebSockets, and production-grade system architecture.',
   },
   {
     title: 'AI & analytics',
@@ -45,7 +47,7 @@ export const aboutPoints = [
   {
     title: 'Ship fast, ship right',
     icon: 'bolt',
-    body: 'Thrive in fast-moving startup environments where ownership, iteration speed, and production-ready engineering discipline matter — from prototype to deployed product.',
+    body: 'Thrive in fast-moving environments where ownership, iteration speed, and production-ready engineering discipline matter — from systems prototype to deployed product.',
   },
 ]
 
@@ -66,15 +68,15 @@ export const aboutPoints = [
 
 export const engineeringCapabilities = [
   {
-    id: 'fullstack',
-    title: 'Full Stack Engineering',
+    id: 'backend',
+    title: 'Backend & Systems Engineering',
     frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    backend: ['Node.js', 'Express.js', 'Firebase', 'Appwrite', 'Auth', 'Authorization', 'REST APIs'],
+    backend: ['Node.js', 'Fastify', 'PostgreSQL', 'Redis', 'C++17', 'REST APIs', 'WebSockets'],
     description:
-      'Built production web applications and backend services — APIs, auth layers, and scalable systems with equal depth across frontend and server-side engineering.',
+      'Built distributed services, concurrent pipelines, and production backends — event-driven architectures, stream processing, and scalable API design with equal depth in systems and application layers.',
     emphasis: 'Primary',
-    strength: 92,
-    projects: '5+ products',
+    strength: 94,
+    projects: '7+ systems',
   },
   {
     id: 'ai',
@@ -107,63 +109,85 @@ export const engineeringCapabilities = [
 
 
 export const featuredProjects = [
+  /* Tier 1 — Hero */
+  {
+    id: 'netpulse',
+    title: 'NetPulse AI',
+    subtitle: 'Distributed service monitoring',
+    description:
+      'Event-driven health monitoring with Redis Streams, incident automation, multi-region workers, and real-time WebSocket dashboards.',
+    tech: ['Node.js', 'Fastify', 'PostgreSQL', 'Redis Streams', 'WebSockets', 'React', 'Docker'],
+    image: '/netpulse.png',
+    imageFallback: 'linear-gradient(135deg, #050816 0%, #0f172a 45%, #1e3a5f 100%)',
+    github: 'https://github.com/adicoder008/NetPulse---Full-Stack-Network-Monitor',
+    live: null,
+    featured: true,
+    tier: 'hero',
+    gridClass: 'grid-netpulse',
+  },
+  /* Tier 2 — Major */
+  {
+    id: 'sentinel',
+    title: 'Sentinel Log Engine',
+    subtitle: 'Multithreaded log analyzer & alerts',
+    description:
+      'C++17 concurrent pipeline — ingestion, parsing, enrichment, rule evaluation, and alerting across six worker stages with 1M-log benchmarks.',
+    tech: ['C++17', 'ThreadPool', 'Concurrency', 'CMake', 'GoogleTest', 'Systems design'],
+    image: '/sentinel.png',
+    imageFallback: 'linear-gradient(135deg, #050816 0%, #1a1a2e 45%, #16213e 100%)',
+    github: 'https://github.com/adicoder008/Multi-threaded-Log-Processing-Alerting-Engine',
+    live: null,
+    featured: true,
+    tier: 'major',
+    gridClass: 'grid-sentinel',
+  },
   {
     id: 'onquest',
     title: 'OnQuest',
     subtitle: 'Travel-tech platform',
     description:
-      'End-to-end travel product for discovery, itineraries, and community engagement. Led full-stack delivery — responsive UI, API design, and growth-focused landing experiences for a startup audience.',
+      'End-to-end travel product for discovery, itineraries, and community engagement — responsive UI, API design, and growth-focused landing experiences.',
     tech: ['React.js', 'TypeScript', 'Next.js', 'GCP', 'Firebase', 'LLMs', 'System Design'],
     image: '/onquest.png',
     github: null,
     live: 'https://onquest.in/',
     featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-4 sm:col-start-1 sm:row-start-1',
+    tier: 'major',
+    gridClass: 'grid-onquest',
   },
-  {
-    id: 'analytics',
-    title: 'AI Business Analytics Engine',
-    subtitle: 'Insights & automation',
-    description:
-      'Modular analytics layer that ingests business metrics, surfaces trends with AI-assisted summaries, and exposes actionable dashboards for operators. Built for fast iteration in startup environments.',
-    tech: ['React', 'Node.js', 'MongoDB', 'OpenAI API', 'Express', 'Charts'],
-    image: '/analytics.png',
-    imageFallback: 'linear-gradient(135deg, #050816 0%, #1e1b4b 45%, #312e81 100%)',
-    github: 'https://github.com/adicoder008/Business-Insights-Engine',
-    live: null,
-    featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-4 sm:col-start-5 sm:row-start-1',
-  },
+  /* Tier 3 — Supporting */
   {
     id: 'productsense',
     title: 'ProductSense AI',
-    subtitle: 'Browser Extension for e-commerce platforms',
+    subtitle: 'Browser extension · e-commerce',
     description:
-      'AI platform for product teams — analyzes feedback, usage signals, and feature data to surface priorities and support faster, evidence-backed product decisions.',
+      'AI platform for product teams — analyzes feedback, usage signals, and feature data to surface priorities and evidence-backed decisions.',
     tech: ['React', 'TypeScript', 'Plasmo', 'OpenAI API', 'Analytics'],
     image: '/prod.png',
     imageFallback: 'linear-gradient(135deg, #050816 0%, #312e81 42%, #4c1d95 100%)',
     github: 'https://github.com/adicoder008/ProductSense-AI/blob/main/README.md',
     live: null,
     featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-4 sm:col-start-9 sm:row-start-1',
+    tier: 'standard',
+    gridClass: 'grid-productsense',
   },
   {
     id: 'glucometer',
     title: 'Glucometer Healthcare Monitor',
     subtitle: 'Non-invasive biosensing',
     description:
-      'ESP32-based electrochemical sensing pipeline with real-time streaming to a MERN dashboard. Signal processing, live waveforms, and health-trend visualization for continuous glucose monitoring research.',
-    tech: ['React', 'TypeScript', 'Express', 'WebSockets', 'ESP32','Hardware integration', 'MongoDB'],
+      'ESP32 electrochemical sensing with real-time streaming to a MERN dashboard — signal processing, live waveforms, and health-trend visualization.',
+    tech: ['React', 'TypeScript', 'Express', 'WebSockets', 'ESP32', 'MongoDB'],
     image: '/gluco.png',
     imageFallback: '/projects/glucometer-dashboard.png',
     github: 'https://github.com/adicoder008/Glucometer-Demo-Website',
     live: 'https://glucometer-demo-website-git-main-adityas-projects-07892ce5.vercel.app/',
     featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-6 sm:col-start-1 sm:row-start-4',
+    tier: 'standard',
+    gridClass: 'grid-glucometer',
   },
   {
-    id: 'Smart Resume Analyser',
+    id: 'resume-analyser',
     title: 'Smart Resume Analyser',
     subtitle: 'AI-powered resume analysis',
     description:
@@ -174,7 +198,24 @@ export const featuredProjects = [
     github: 'https://github.com/adicoder008/NEWW',
     live: 'https://neww-git-master-adityas-projects-07892ce5.vercel.app/',
     featured: true,
-    bentoClass: 'col-span-12 row-span-3 sm:col-span-6 sm:col-start-7 sm:row-start-4',
+    tier: 'standard',
+    gridClass: 'grid-resume-analyser',
+  },
+  /* Tier 4 — Least prominent (last in grid) */
+  {
+    id: 'analytics',
+    title: 'AI Business Analytics Engine',
+    subtitle: 'Insights & automation',
+    description:
+      'Modular analytics layer that ingests business metrics, surfaces AI-assisted trends, and exposes actionable dashboards for operators.',
+    tech: ['React', 'Node.js', 'MongoDB', 'OpenAI API', 'Express', 'Charts'],
+    image: '/analytics.png',
+    imageFallback: 'linear-gradient(135deg, #050816 0%, #1e1b4b 45%, #312e81 100%)',
+    github: 'https://github.com/adicoder008/Business-Insights-Engine',
+    live: null,
+    featured: true,
+    tier: 'minor',
+    gridClass: 'grid-analytics',
   },
 ]
 

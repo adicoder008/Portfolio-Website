@@ -5,23 +5,23 @@ import SectionHeader from './SectionHeader'
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="relative z-[1] scroll-mt-24 border-t border-violet-500/[0.08] px-4 py-16 sm:px-6 lg:px-8">
+    <section id="projects" className="relative z-[1] scroll-mt-24 border-t border-violet-500/[0.08] px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           label="Featured work"
           title="Selected projects"
-          description="Five products — travel-tech, AI analytics, product intelligence, healthcare IoT, and internal tooling."
+          description="Tiered by impact — distributed systems, concurrent pipelines, and production products at a glance."
         />
 
-        {/* Bento grid: 5 cards — 3 top, 2 bottom */}
-        <div className="projects-bento mt-8">
+        {/* 4-col grid · Row 1: NetPulse (2) + Sentinel + OnQuest · Row 2: four supporting projects */}
+        <div className="projects-grid mt-6">
           {featuredProjects.map((project, i) => (
             <FeaturedProjectCard
               key={project.id}
               {...project}
               index={i}
-              compact
-              className={project.bentoClass ?? ''}
+              tier={project.tier ?? 'standard'}
+              className={project.gridClass ?? ''}
             />
           ))}
         </div>

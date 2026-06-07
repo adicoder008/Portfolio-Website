@@ -17,8 +17,8 @@ const About = () => {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           label="About"
-          title="Full-stack engineer · NITK Surathkal"
-          description="I build and ship React & Node products — AI tools, dashboards, and startup platforms — with clean architecture and a bias toward production."
+          title="Software engineer · NITK Surathkal"
+          description="I build production systems — distributed backends, concurrent pipelines, real-time platforms, and AI-powered products — with clean architecture and a bias toward shipping."
         />
 
         <div className="mt-10 grid gap-4 sm:grid-cols-3 sm:gap-5">
